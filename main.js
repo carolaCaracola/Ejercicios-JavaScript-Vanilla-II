@@ -8,31 +8,31 @@ Aquí te mostramos que necesita cada figura:
 • Triangulo: (base * altura) / 2
 • Cuadrado: lado * lado*/ 
 
-var calcularArea = prompt("Introduce una figura: circulo, triangulo o cuadrado ");
+let calcularArea = prompt("Introduce una figura: circulo, triangulo o cuadrado ");
 
 if (calcularArea.toLowerCase() == "circulo"){
 
-   var radio= prompt("Introduce el radio del circulo ");
+   let radio= prompt("Introduce el radio del circulo ");
    const PI = "3.14";
-   var num = parseFloat(PI)
+   let num = parseFloat(PI)
 
-   var areaCirculo = (radio*radio) *PI;
+   let areaCirculo = (radio*radio) *PI;
 
    console.log ("El area del circúlo introducido es:" + " " + areaCirculo + "cm"); 
 
 } else if (calcularArea.toLowerCase() == "triangulo"){
-    var b= prompt("Introduce la base del triangulo");
-    var h= prompt("Introduce la altura del triangulo ");
+    let b= prompt("Introduce la base del triangulo");
+    let h= prompt("Introduce la altura del triangulo ");
 
-    var areaTriangulo = (b*h) / 2;
+    let areaTriangulo = (b*h) / 2;
 
    console.log ("El area del triangulo introducido es:" + " " + areaTriangulo + "cm"); 
    
 }else if (calcularArea.toLowerCase() == "cuadrado"){
-    var l1= prompt("Introduce un lado del cuadrado");
-    var l2= prompt("Introduce otro lado del cuadrado");
+    let l1= prompt("Introduce un lado del cuadrado");
+    let l2= prompt("Introduce otro lado del cuadrado");
 
-    var areaCuadrado = l1*l2;
+    let areaCuadrado = l1*l2;
 
    console.log ("El area del cuadrado introducido es:" + " " + areaCuadrado + "cm"); 
 }else{
@@ -46,10 +46,10 @@ entre que números queremos que los genere, podemos pedirlas al usuario antes de
 generar los números. Este método devolverá un número entero aleatorio. Muestra
 estos números por consola.*/
 
-var cantidad = prompt("Introduce la cantidad de numeros que quieres que se generen");
-var desde = parseInt(prompt("Introduce desde que numero mínimo empezará a generar numeros aleatorios"));
-var hasta = parseInt(prompt("Introduce hasta que numero máximo empezará a generar numeros aleatorios"));
-var numeros = [];
+let cantidad = prompt("Introduce la cantidad de numeros que quieres que se generen");
+let desde = parseInt(prompt("Introduce desde que numero mínimo empezará a generar numeros aleatorios"));
+let hasta = parseInt(prompt("Introduce hasta que numero máximo empezará a generar numeros aleatorios"));
+let numeros = [];
 
 
 function numeroAleatorio(cantidad, desde, hasta) {
@@ -69,10 +69,10 @@ devolver true si es primo sino false. Un número primo es aquel solo puede divid
 entre 1 y sí mismo. Por ejemplo: 25 no es primo, ya que 25 es divisible entre 5, sin
 embargo, 17 si es primo.*/
 
-var numero =parseInt( prompt(" Introduce un numero "));
+let numero =parseInt( prompt(" Introduce un numero "));
 function primo(numero) {
 
-     for (var i = 2; i < numero; i++) {
+     for (let i = 2; i < numero; i++) {
   
       if (numero % i === 0) {
         console.log(numero + " No es un numero primo porque " + i + " es un multiplo");
@@ -100,9 +100,9 @@ calcular el factorial, se multiplica los números anteriores hasta llegar a uno.
 ejemplo, si introducimos un 5, realizara esta operación 5*4*3*2*1=120.*/
 
 	
-var numeroF =parseInt( prompt(" Introduce un numero a factorizar "));
+let numeroF =parseInt( prompt(" Introduce un numero a factorizar "));
 function factorial (numeroF) {
-	var total = 1; 
+	let total = 1; 
 	for (i=1; i<=numeroF; i++) {
 		total = total * i; 
 	}
@@ -117,7 +117,7 @@ String con el numero convertido a binario. Para convertir un número decimal a
 binario, debemos dividir entre 2 el número y el resultado de esa división se divide
 entre 2 de nuevo hasta que no se pueda dividir más, el resto que obtengamos de
 cada división formara el número binario, de abajo a arriba.*/
-var numeroB = prompt(" Introduce un numero que quieras convertir en binario ");
+let numeroB = prompt(" Introduce un numero que quieras convertir en binario ");
 function convertToBinary1 (numeroB) {
     let num = numeroB;
     let binary = (num % 2).toString();
@@ -133,8 +133,8 @@ function convertToBinary1 (numeroB) {
 (hay que controlarlo) pedido por prompt. Crea un método que realice esta acción,
 pasando el número por parámetro devolverá el número de cifras.*/
 
-var numC = prompt("Introduce un número entero positivo para saber cuantas cifras tiene");
-var nCifras = Array.from(numC);
+let numC = prompt("Introduce un número entero positivo para saber cuantas cifras tiene");
+let nCifras = Array.from(numC);
 
 alert(nCifras.length);
 
@@ -177,15 +177,15 @@ cambio(euros, moneda);
 por consola el índice y el valor al que corresponde. Haz dos métodos, uno para
 rellenar valores y otro para mostrar.*/
 
-var array = [];
+let arrayC = [];
 let x;
 
 for (let x = 1; x <= 10; x++) {
-    array.push(prompt("Introduce el número " + x + " del array."));
+    arrayC.push(prompt("Introduce el número " + x + " del array."));
 }
 
-for (let x = 0; x < array.length; x++) {
-    console.log(array[x] + " es el valor de la posición " + x + " del array.");
+for (let x = 0; x < arrayC.length; x++) {
+    console.log(arrayC[x] + " es el valor de la posición " + x + " del array.");
 }
 
 /* 9. Crea un array de números donde le indicamos por prompt el tamaño del array,
@@ -195,17 +195,17 @@ método para rellenar el array(que tenga como parámetros los números entre los
 tenga que generar) y otro para mostrar el contenido y la suma del array.*/
 
      
-var array = [];
-var y;
-var tamaño = prompt("Introduce tamaño del array");
-tamaño = parseInt(tamaño);
-var suma = 0;
+let array = [];
+let y;
+let tamanyo = prompt("Introduce tamaño del array");
+tamanyo = parseInt(tamanyo);
+let suma = 0;
 
-for (let y = 1; y <= tamaño; y++) {
+for (let y = 1; y <= tamanyo; y++) {
     array.push(parseInt(Math.random() * (10 - 0)));
 }
-array.forEach(tamaño => {
-    suma = suma + tamaño;
+array.forEach(tamanyo => {
+    suma = suma + tamanyo;
 });
 
 console.log("El contenido del array es:" +" " + array);
@@ -221,7 +221,7 @@ size = parseInt(size);
 let primoB = true;
 let arrayB = [];
 let numB;
-var j;
+let j;
 
 const numRandom = () => {
     numB = Math.floor(Math.random() * (100 - 3) + 3);
@@ -259,5 +259,52 @@ los valores del segundo array con valores aleatorios. Después, crea un método 
 tenga como parámetros, los dos arrays y devuelva uno nuevo con la multiplicación
 de la posición 0 del array1 con el del array2 y así sucesivamente. Por último, muestra
 el contenido de cada array.*/
+
+let tamano = parseInt(prompt("Introduce la dimension del array"));
+let numX;
+
+const nRandom = ()=>{numX= Math.floor(Math.random() * tamano)
+    return numX;}
+
+    let array1 = Array.from({length: (tamano)}, () => Math.floor(Math.random() * tamano));
+
+    let array2 = array1.slice();
+    array1.sort();
+
+console.log(array1);
+console.log(array2);
+
+const multiplyArrays = (array1, array2) => {
+    let result = array1.map((val, index) => val * array2[index]);
+    console.log(result);
+  }
+  multiplyArrays(array1, array2);
+
+  /*12. Crea un array de números de un tamaño pasado por prompt, el array contendrá
+números aleatorios entre 1 y 300 y mostrará aquellos números que acaben en un
+dígito que nosotros le indiquemos por prompt (debes controlar que se introduce un
+número correcto), estos deben guardarse en un nuevo array. Por ejemplo, en un
+
+JavaScript Vanilla Basics
+
+array de 10 posiciones le indicamos mostrar los números acabados en 5, podría salir
+155, 25, etc.*/
+  
+let sizes = parseInt(prompt("Introduce el tamaño del array:"));
+let digit = prompt("Introduce en que numero quieres que acaben lo digitos mostrados:");
+
+// Controlar que se introduce un numero correcto
+if (isNaN(digit) || digit.length !== 1) {
+  alert("Por favor introduzca un digito correcto.");
+}
+
+// Metodo para crear el array
+let numbers = Array.from({length: size}, () => Math.floor(Math.random() * 300) + 1);
+console.log("array Original: " + numbers);
+
+// Filtrar los numeros que acaben en el digito indicado
+let filteredNumbers = numbers.filter(num => num.toString().endsWith(digit));
+console.log("numeros que terminan en este digito: " + filteredNumbers);
+
 
 
